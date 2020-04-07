@@ -1,0 +1,24 @@
+main {
+  height: 100vh;
+  padding-top: 20vh;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: Raleway;
+}
+
+.container {
+  background-color: white;
+  width: 550px;
+  padding: 40px 0;
+}
+
+.row {
+  height: 50px;
+  padding: 20px;
+}
+
+#tweet-quote, #tumblr-quote, #new-quote {
+  color: white;
+}
