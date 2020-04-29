@@ -21,13 +21,9 @@ $(document).ready(() => {
 
   /*Show initial quote, author etc*/
 
-  $('#quote-text').html(() => {
-    return quoteString;
-  });
+  $('#quote-text').html(quoteString).hide().fadeIn(500);
 
-  $('#author-text').html(() => {
-    return authorString;
-  });
+  $('#author-text').html(authorString).hide().fadeIn(500);
 
   $('#tweet-quote').attr("href", tweetString);
 
@@ -53,19 +49,17 @@ $(document).ready(() => {
   /*BUTTON FUNCTION*/
   /*Change the color and quote/author etc when the New Quote button is clicked*/
   $("#new-quote").on("click", () => {
+
     generateColor();
-    $(".bg-color").css("background-color", color);
-    $(".main-color").css("color", color);
+
+    $(".bg-color").css({"transition": "background-color, 1s", "background-color": color});
+    $(".main-color").css({"transition": "color, 1s", "color": color});
 
     generateQuote();
 
-    $("#quote-text").html(() => {
-      return quoteString;
-    });
+    $("#quote-text").html(quoteString).hide().fadeIn(1000);
 
-    $("#author-text").html(() => {
-      return authorString;
-    });
+    $("#author-text").html(authorString).hide().fadeIn(1000);
 
     $("#tweet-quote").attr("href", tweetString);
 
