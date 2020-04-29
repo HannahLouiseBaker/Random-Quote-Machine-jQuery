@@ -10,8 +10,31 @@ h1 {
 
 .container {
   background-color: white;
+  height: 310px;
   width: 550px;
   padding: 40px 0;
+}
+
+/*Vertical Center code copied from here:
+https://www.w3schools.com/howto/howto_css_center-vertical.asp*/
+#quote {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#text {
+  height: 120px;
+  position: relative;
+}
+
+#authors {
+  height: 50px;
+}
+
+#socials {
+  height: 50px;
 }
 
 .row {
